@@ -1,0 +1,11 @@
+{
+  "name": "strings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "capitalization.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Joris Raymaekers <joris@jorisr.com> (jorisr.com)",
+  "license": "ISC"
+}

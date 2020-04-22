@@ -1,7 +1,7 @@
 {
-  "name": "strings",
+  "name": "Strings Problems",
   "version": "1.0.0",
-  "description": "",
+  "description": "Strings related challenges in javascript with Jest testing",
   "main": "capitalization.js",
   "scripts": {
     "test": "jest"

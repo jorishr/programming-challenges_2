@@ -18,12 +18,6 @@ make it 0-3 for manual example with 2 slots
 1   2
 1   3
 
-// is there a better recursive solution?
-
-// see heaps algorithmm,
-and https://stackoverflow.com/questions/37892738/generate-subsets-of-length-n,
-and permutations
-
 create array
 loop to 0, push to array
     loop to 0, push to array
@@ -39,6 +33,17 @@ loop to 0, push to array
 create array
 loop to 1, push to array
     loop to 0, push to array    
+
+// NOTE: my solution below works for two slots only,
+adding additional loops does not generate all possible combinations
+// is there a better recursive solution?
+
+// sources to consider: 
+- heap's algorithm: https://en.wikipedia.org/wiki/Heap%27s_algorithm
+- https://stackoverflow.com/questions/37892738/generate-subsets-of-length-n,
+- https://medium.com/@paulrohan/implemetning-heap-algorithm-to-find-permutation-of-a-set-of-numbers-in-javascript-d6b6ef8ee0e
+- https://www.youtube.com/watch?v=xghJNlMibX4 
+
 */
 const values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 function generateArray(arr){

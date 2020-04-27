@@ -2,17 +2,6 @@
 JAVASCRIPT CODING EXERCISES
 ###########################
 
-#############
-I.	NUMBERS
-#############
-
-INTEGER REVERSAL: reversing an Int
-
-MAX CHARS
-
-PERMUTATIONS
-Generate all possible permutations for a bike lock with 3 number slots.
-
 ############
 II.	ARRAYS
 ############

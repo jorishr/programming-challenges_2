@@ -6,7 +6,7 @@
 - don't read too much into the problem, assume that the scope is what you can actually read and don't add unnecessary edge cases by thinking in terms of an expanded "real world" problem
 
 ## STEP 2
-- coding is automating problems that can be done manually, solve the problem manually with a three or more sets of example data
+- coding is automating problems that can be done manually, solve the problem manually with three or more sets of example data
 - refine your thinking based on the example data
 
 ## STEP 3

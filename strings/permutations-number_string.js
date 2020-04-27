@@ -7,13 +7,13 @@ STRING METHODS
 VII. ALL POSSIBLE PERMUTATION OF A NUMBER TRANSLATED INTO STRING
 ####3###########################################################
 
-Thus 12 could l or ab.
+Thus 12 could be l or ab.
 
 with larger numbers like 11111 could be: bbbbb or 11 11 1 thus, kkb or 1 11 11
 thus bkk or 1 1 11 1 thus bbkb etc.
 
 manual solution:
-- case one digit: 24 posibilities a-z
+- case one digit: 26 posibilities a-z
     0 -> a, 1 -> b, 2 -> c
 - case two digits: 
     - if < 26: one letter or 2 and 4, thus z, c and d
@@ -57,10 +57,16 @@ function translate(num){
     }
     return result;
 }
+
+// run in node or see Jest test: 
 const permutations3456623 = translate(3456623);
 console.log('Possible Permutations for 3456623: ', permutations3456623);
 
 const permutations12 = translate(12);
 console.log('Possible Permutations for 12: ', permutations12);
 
+
+module.exports = {
+    translate
+}
 

@@ -3,6 +3,7 @@
 I.  Title Capitalization
 II. Capitalize character at given index position
 ################################################
+-> also see Jest Testing
 
 ########################
 I.  Title Capitalization
@@ -16,7 +17,7 @@ the correct capitalization according the following rules:
 "but", "or". Unless they are the first or last word in the string.
 Uppercase any word not in the above list.
 
-A word is defined a series of non-space characters.
+A word is defined by a series of non-space characters.
 
 Manual solution:
 - break up the string into words

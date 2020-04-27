@@ -15,6 +15,9 @@ Thus 'I love javascript' becomes 'tpircsavaj evol I'.
 
 - start at the end of the string and build a new string with each consecutive
 character
+
+- note, can also be used to reverse integers, as you first convert them to a 
+string and once done, revert to number
 */
 function charReverse(str){
     let newStr = '';

@@ -27,6 +27,35 @@ function charReverse(str){
     return newStr;
 }
 
+function charReverseWithStack(str){
+    let stack = [];
+    let newStr= '';
+    for(let i = 0; i < str.length; i++){
+        stack.push(str[i]);
+    }
+    while(stack.length > 0){
+        newStr += stack.pop();
+    }
+    return newStr;
+}
+
+function charReverseWithVars(str){
+    let arr = Array.from(str);
+    let i = 0;
+    let j = arr.length - 1;
+    while(i < j){
+        //swap i j
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++
+        j--
+    }
+    return arr.join('');
+}
+//NOTE: both the stack and var solution have a time complexity of O(n)
+//the vars solution has a better memory complexity of O(1) vs O(n) for the stack
+
 /*
 #############################
 II. REVERSE WORDS IN A STRING
@@ -95,5 +124,7 @@ function isPalindrome(str){
 module.exports = {
     charReverse,
     wordReverse,
-    isPalindrome
+    isPalindrome,
+    charReverseWithStack,
+    charReverseWithVars
 }

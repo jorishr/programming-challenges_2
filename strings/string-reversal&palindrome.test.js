@@ -1,4 +1,6 @@
 const charReverse  = require('./string-reversal&palindrome').charReverse;
+const charReverseWithStack = require('./string-reversal&palindrome').charReverseWithStack;
+const charReverseWithVars  = require('./string-reversal&palindrome').charReverseWithVars;
 const wordReverse  = require('./string-reversal&palindrome').wordReverse;
 const isPalindrome = require('./string-reversal&palindrome').isPalindrome;
 
@@ -7,6 +9,18 @@ test('Reverse all characters in a string', () => {
     const input     = 'I love javascript';
     const expected  = 'tpircsavaj evol I'
     expect(charReverse(input)).toEqual(expected); 
+})
+
+test('Reverse all characters in a string, stack method', () => {
+    const input     = 'I love javascript';
+    const expected  = 'tpircsavaj evol I'
+    expect(charReverseWithStack(input)).toEqual(expected); 
+})
+
+test('Reverse all characters in a string, variables method', () => {
+    const input     = 'I love javascript';
+    const expected  = 'tpircsavaj evol I'
+    expect(charReverseWithVars(input)).toEqual(expected); 
 })
 
 test('Reverse the words in a string - even number of words', () => {

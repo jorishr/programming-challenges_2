@@ -3,6 +3,7 @@ const charReverseWithStack = require('./string-reversal&palindrome').charReverse
 const charReverseWithVars  = require('./string-reversal&palindrome').charReverseWithVars;
 const wordReverse  = require('./string-reversal&palindrome').wordReverse;
 const isPalindrome = require('./string-reversal&palindrome').isPalindrome;
+const reversStringRecursively = require('./string-reversal&palindrome').reversStringRecursively;
 
 
 test('Reverse all characters in a string', () => {
@@ -42,4 +43,13 @@ test('Is the string a palindrome?', () => {
     expect(isPalindrome(input1)).toBe(true);
     expect(isPalindrome(input2)).toBe(false);
     expect(isPalindrome(input3)).toBe(true);
+})
+
+test('Reverse all characters in a string, recursively', () => {
+    const input1     = 'I love javascript';
+    const expected1  = 'tpircsavaj evol I';
+    const input2     = '12345abcde';
+    const expected2  = 'edcba54321';
+    expect(charReverseWithVars(input1)).toEqual(expected1); 
+    expect(charReverseWithVars(input2)).toEqual(expected2); 
 })

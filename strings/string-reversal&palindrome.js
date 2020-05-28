@@ -1,11 +1,12 @@
 /*
 ###############
 STRING REVERSAL
-#################################
-I.      REVERSE STRING CHARACTERS 
-II.     REVERSE WORDS IN A STRING
-III.    PALINDROME?
-#################################
+#############################################
+I.      REVERSE STRING CHARACTERS
+II.     REVERSE STRING CHARACTERS RECURSIVELY 
+III.    REVERSE WORDS IN A STRING
+IV.     PALINDROME?
+#############################################
 
 #############################
 I.  REVERSE STRING CHARACTERS 
@@ -57,9 +58,64 @@ function charReverseWithVars(str){
 //the vars solution has a better memory complexity of O(1) vs O(n) for the stack
 
 /*
-#############################
-II. REVERSE WORDS IN A STRING
-#############################
+##########################
+III.    RECURSIVE SOLUTION
+##########################
+Write a function that accepts a string a reverses the string characters. 
+Use recursion.
+
+This solutions requires the use of the string method substring: subtr()
+
+substr(): the first argument is the starting position in the string, the second
+argument is optional and can indicate how many characters it has to extract. 
+The default is one character. Thus, the return value of the substr() method is 
+a specific part of a given string.
+
+"abcd".substr(1, 2) //-> starts at [1], "b", and extract 2 characters: "b, c"
+
+One each recursive call we split off the first character and concatenate it at 
+the end of string that is returned by the recursion. The remaining string is 
+passed through function again untill the string has just one 
+character left. The result is the concatenation of all characters in reverse 
+order.
+*/
+function reverseStringRecursively(string){
+    if(string <= 1){ 
+        return string;
+        // "a" returns "a"
+    }
+    return reverseString(string.substr(1)) + string[0];
+}	
+/*
+Recursion tree:
+                    fn("abcd") 
+                fn("bcd") + "a"
+            fn("cd") + "b"
+        fn("d") + "c"
+    fn("d")
+Unwind the stack: 
+    "d" 
+        "d" + "c" 
+            "dc" + "b"
+                "dcb" + "a"
+                    "dcba"
+
+Time and space complexity of this solution is O(n):
+
+Time:
+- compare: one constant unit of time
+- assume subtr() method and str[0] take constant time
+- concatenation: one constant unit of time
+- function is repeated n times
+T(n) = n * (1 + 1 + 1 + 1) = 4n => O(n)
+
+Space complexity is related to the depth of the recursion tree as all recursive
+calls get added to the call stack. With n levels in the tree the space 
+complexity amounts a linear growth rate of O(n). 
+
+#################################
+III.    REVERSE WORDS IN A STRING
+#################################
 Write a function that reverses all WORDS in a string.
 Thus 'I love javascript' becomes 'javascript love I'.
 
@@ -104,9 +160,9 @@ function reverse(str){
 reverse('I love javascript')    //->  'javascript love I'
 
 /*
-###############
-III. PALINDROME
-###############
+##############
+IV. PALINDROME
+##############
 Is the string a palindrome?
 
 The problem is similar to string reversal:
@@ -126,5 +182,6 @@ module.exports = {
     wordReverse,
     isPalindrome,
     charReverseWithStack,
-    charReverseWithVars
+    charReverseWithVars,
+    reverseStringRecursively
 }

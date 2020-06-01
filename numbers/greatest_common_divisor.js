@@ -51,7 +51,48 @@ function euclidGcd(a, b){
     }
     return dividend;
 }
+/**
+ * Optimizations:
+ * - the first condition can be simplified to set the dividen to a and the 
+ * divior to b. This will merely add one single loop to get the same result
+ * 
+ * dividen = a
+ * divisor = b
+ * if a > b, no issue 
+ * if a < b we get for example 5 and 10:
+ * 
+ * dividend     5     10
+ * divisor      10    5
+ * remainder    5     0
+ * 
+ * */
+function euclidSimplified(a, b){
+    while(b !== 0){
+        remainder = a % b;
+        a = b;
+        b = remainder;
+    }
+    return a;
+}
+/**
+ * This can also bring us to a recursive solution
+ */
+function euclidRecursive(a, b){
+    return b === 0 ? a : euclidRecursive(b, a % b);
+}
+
+/**
+ * TIME COMPLEXITY ANALYSIS
+ * All comparisons, divisions and modulo calculations can be assume to take
+ * constant time O(1). How many times the loop or recursion runs depends on the
+ * size of the divisor b, or the number of digits of b.
+ * 
+ * B is an integer that can written through its decimal representation log10b.
+ * This brings us to a time complexity of O(log(b))
+ */
 module.exports = {
     findGcd,
-    euclidGcd
+    euclidGcd,
+    euclidSimplified,
+    euclidRecursive
 }

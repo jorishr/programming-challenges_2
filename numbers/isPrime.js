@@ -3,13 +3,13 @@
 ############
 PRIME NUMBER
 ############
-
 Is a given Number a PRIME NUMBER?
 
 A prime number is an integer bigger than 1 that can only be divided by two other integers:
 1 and itself. Thus the smallest prime number is 2, followed by 3, 5, 7, 11, etc.
 
-This means that all even numbers above 2 are NOT prime numbers.
+This means that all even numbers above 2 are NOT prime numbers because they can
+be divided by two, one and itself.
 
 LOGIC
 - Check if the input is an integer.
@@ -25,11 +25,6 @@ function isPrime(num){
     }
     return true;
 }
-// print all prime numbers less than 50
-for(let i = 0; i < 50; i++){
-	if(isPrime(i)) console.log(i);
-}
-
 /*
 RUN TIME COMPLEXITY EVALUATION
 - The first two if statements are CONSTANT TIME checks: O(1)
@@ -58,5 +53,66 @@ The time complexity reduces greatly to O(log(sqrt(n)). For example, for number
 If you double that number n to 98 you get a loop that starts at 3, jumps to 5
 and 7 to end at sqrt(98) or 9.899 (9).
 */
+function isPrimeOptimized(num){
+    if(!Number.isInteger(num) || num <= 1) return false;
+    if(num > 2 && num % 2 == 0) return false;
+    for(i = 3; i <= Math.sqrt(num); i += 2){
+        if(num % i == 0) return false;
+    }
+    return true;
+}
+/* 
+Find all prime number number less then a given number
+Basic solution:
+*/
+function findPrimes(n){
+    let primes = []
+    for(let i = 0; i < n; i++){
+        if(isPrime(i)) primes.push(i);
+    }
+    return primes;
+}
+/**
+ * Sieve of Eratosthenes: assume all numbers are prime.
+To find all prime numbers less than a given number n we can use additional 
+optmizations by eliminating all multiples of a previously found prime number.
 
-module.exports = isPrime;
+Thus if you find 3 to be a prime number, you can eliminate 9, 12, 18 etc.
+Thus if you find 5 to be a prime number, you can eliminate 10, 15, 20 etc.
+
+- create an boolean array that represents all numbers we have to check
+- assume all numbers are prime, thus set all values to true
+- loop over the array and if you find a value = true, that number is 
+prime and thus pushed to results array, starting with 2.
+- now find all multiples of two and set their value to false in the boolean 
+array
+- next number = 3, true -> all multiples of 3 set to false
+- next number = 4, already set to false -> next loop
+- next number = 5, true -> all multiples of 5 set to false
+- ...
+- return the results array
+*/
+function sievePrimes(n){
+    let isPrime = new Array(n + 1).fill(true);
+    //isPrime[0] = false;
+    //isPrime[1] = false;
+
+    let primeNumbers = [];
+
+    for(let i = 2; i < n; i++){
+        if(isPrime[i] === true){
+            primeNumbers.push(i);
+            for(let j = i * i; j <= n; j += i){
+                isPrime[j] = false;
+            }
+        }
+    }
+    return primeNumbers;
+}
+
+module.exports = {
+    isPrime,
+    isPrimeOptimized,
+    findPrimes,
+    sievePrimes
+}

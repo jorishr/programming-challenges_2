@@ -1,0 +1,11 @@
+{
+    "name": "Power calculations",
+    "version": "1.0.0",
+    "description": "Number related challenges in javascript with Jest testing",
+    "main": "fast_powering.js",
+    "scripts": {
+      "test": "jest"
+    },
+    "author": "Joris Raymaekers <joris@jorisr.com> (jorisr.com)",
+    "license": "ISC"
+}

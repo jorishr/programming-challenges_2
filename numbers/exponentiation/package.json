@@ -1,0 +1,11 @@
+{
+    "name": "Exponentation calculations",
+    "version": "1.0.0",
+    "description": "Number related challenges in javascript with Jest testing",
+    "main": "exponentiation.js",
+    "scripts": {
+      "test": "jest"
+    },
+    "author": "Joris Raymaekers <joris@jorisr.com> (jorisr.com)",
+    "license": "ISC"
+}

@@ -2,6 +2,8 @@
  * The Fisher–Yates shuffle is an algorithm for generating a random permutation
  * of a finite sequence.
  * 
+ * In other words, randomly shuffle a given array in O(n).
+ * 
  * To shuffle an array a of n elements (indices 0 to n-1):
  * [1,2,3,4,5]
  * i = 4    random (between 0 and 4) = 2  -> [1,2,5,4,3]

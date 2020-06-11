@@ -5,6 +5,7 @@ const numRotations        = require('./count_rotations').numRotations;
 const numRotationsWithBs  = require('./count_rotations').numRotationsWithBs;
 const findPivot           = require('./count_rotations').findPivot;
 const pivotedBinarySearch = require('./search_element').pivotedBinarySearch;
+const isRotationOf        = require('./is_rotation_of_other_array');
 
 describe('Tests array rotation methods', () => {
     test('Rotates the array clockwise, k times - copyRotate fn', () => {
@@ -77,5 +78,26 @@ describe('Find the index position of an element in rotated array', () => {
         expect(findPivot([5,1,2,3,4])).toBe(0);
         expect(findPivot([1])).toBe(-1);
         expect(findPivot([])).toBe(-1);
+    })
+})
+
+describe('Is an array a rotation of another array?', () => {
+    test('Returns true if input array is rotation of base array', () => {
+        const base   = [1,2,3,4];
+        const input1 = [2,3,4,1];
+        const input2 = [3,4,1,2];
+        const input3 = [4,1,2,3];
+        const base2  = [10,5,7,12]; 
+        const input4  = [12,10,5,7]; 
+        const input5  = [5,7,12,10]; 
+        const input6  = [5,1,12,10]; 
+        const input7  = [5,7,12,10,11]; 
+        expect(isRotationOf(base, input1)).toBe(true);
+        expect(isRotationOf(base, input2)).toBe(true);
+        expect(isRotationOf(base, input3)).toBe(true);
+        expect(isRotationOf(base2, input4)).toBe(true);
+        expect(isRotationOf(base2, input5)).toBe(true);
+        expect(isRotationOf(base2, input6)).toBe(false);
+        expect(isRotationOf(base2, input7)).toBe(false);
     })
 })

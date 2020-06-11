@@ -14,7 +14,7 @@
  * The brute force approach would be to use a double loop to check for each
  * item in the longest arr whether the element occurs in the other array.
  * 
- * A more efficient approach will find all common elements in O(n + m).
+ * A more efficient approach will find all common elements in O(max(n,m)).
  * 
  * Use one while loop and traverse each array independently by using 
  * different pointers.

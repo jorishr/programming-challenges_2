@@ -2,6 +2,8 @@ const containsSubstr = require('./substring_search').containsSubstr;
 const findLongestSubStr = require('./longest-shortest_substring').findLongestSubStr;
 const findPalindromicSubStr = require('./longest-shortest_substring').findPalindromicSubStr;
 const findShortestSubStrWithSet = require('./longest-shortest_substring').findShortestSubStrWithSet;
+const isRotationOfConcat = require('./is_str_rotation_other_str').isRotationOfConcat;
+const isRotationOfLoop = require('./is_str_rotation_other_str').isRotationOfLoop;
 
 describe('Substring search', () =>{
     test('Fn returns true if substring can be found in string', () =>{
@@ -31,5 +33,38 @@ describe('Substring search', () =>{
         expect(findShortestSubStrWithSet('abecccccdfff', ['e', 'd'])).toEqual('ecccccd')
         expect(findShortestSubStrWithSet('abecccccdfff', ['x', 'd'])).toBe(-1)
         expect(findShortestSubStrWithSet('', ['x', 'd'])).toBe(-1)
+    })
+})
+
+describe('Is given string a rotation of another string?', () => {
+    test('Concatenation approach - Returns true the inputStr is a rotation of a given baseStr', () => {
+        const baseStr   = 'abcd';
+        const inputStr1 = 'bcda';
+        const inputStr2 = 'cdab';
+        const inputStr3 = 'dabc';
+        const inputStr4 = 'bacd';
+        const inputStr5 = 'abdc';
+        expect(isRotationOfConcat(baseStr, inputStr1)).toBe(true);
+        expect(isRotationOfConcat(baseStr, inputStr2)).toBe(true);
+        expect(isRotationOfConcat(baseStr, inputStr3)).toBe(true);
+        expect(isRotationOfConcat(baseStr, inputStr4)).toBe(false);
+        expect(isRotationOfConcat(baseStr, inputStr5)).toBe(false);
+    })
+    test('Loop approach - Returns true the inputStr is a rotation of a given baseStr', () => {
+        const baseStr   = 'abcd';
+        const inputStr1 = 'bcda';
+        const inputStr2 = 'cdab';
+        const inputStr3 = 'dabc';
+        const inputStr4 = 'bacd';
+        const inputStr5 = 'abdc';
+        const inputStr6 = 'adcb';
+        const inputStr7 = 'bdca';
+        expect(isRotationOfLoop(baseStr, inputStr1)).toBe(true);
+        expect(isRotationOfLoop(baseStr, inputStr2)).toBe(true);
+        expect(isRotationOfLoop(baseStr, inputStr3)).toBe(true);
+        expect(isRotationOfLoop(baseStr, inputStr4)).toBe(false);
+        expect(isRotationOfLoop(baseStr, inputStr5)).toBe(false);
+        expect(isRotationOfLoop(baseStr, inputStr6)).toBe(false);
+        expect(isRotationOfLoop(baseStr, inputStr7)).toBe(false);
     })
 })

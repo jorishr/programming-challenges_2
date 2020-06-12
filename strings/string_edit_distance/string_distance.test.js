@@ -1,6 +1,7 @@
 const hammingDistance = require('./hamming_distance');
 const editDistanceRec = require('./levenshtein_distance').editDistanceRec;
 const editDistanceDp  = require('./levenshtein_distance').editDistanceDp;
+const editDistanceEqualTo = require('./levenshtein_distance').editDistanceEqualTo;
 
 describe('Edit Distance metrics', () => {
     test('Hamming distance - Number of positions for which characters are different in strings of equal length', () =>{
@@ -25,5 +26,11 @@ describe('Edit Distance metrics', () => {
         const str4 = 'saturday';
         expect(editDistanceDp(str1, str2)).toBe(1);
         expect(editDistanceDp(str3, str4)).toBe(3);
+    })
+    test('Is edit distance equal to given number?', () => {
+        expect(editDistanceEqualTo('abcd', 'bcd', 1)).toBe(true);
+        expect(editDistanceEqualTo('abc', 'abcd', 1)).toBe(true);
+        expect(editDistanceEqualTo('abc', 'a', 1)).toBe(false);
+        expect(editDistanceEqualTo('a', 'abc', 1)).toBe(false);
     })
 })

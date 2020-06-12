@@ -136,7 +136,58 @@ function editDistanceDp(str1, str2){
     //console.log(mem);
     return mem[m][n]
 }
+/**
+ * ########################################
+ * IS EDIT DISTANCE EQUAL TO A GIVEN NUMBER
+ * ########################################
+ * There are two approaches: 
+ * - calculate the edit distance and compare to x, O(n^2)
+ * - simple string traversal and keep track of difference in char found, O(n)
+ * The latter approach does not require us to calculate the levenshtein 
+ * distance as such:
+ * 
+ * LOGIC
+ * - if difference between m an n is more than 1, return false.
+ * - start count = 0
+ * - traverse both strings from first character, using two different pointers
+ * Two posibilities:
+ * -- current chars match -> move both pointers i + 1, j + 1 
+ * -- current chars don't match, increment count of edits and if count at any
+ * reiteration becomes more than 1 return false. Two posibilities remain:
+ * -- if length of one string is larger, then only possible edit is to remove
+ * a character, thus move ahead the pointer of larger string
+ * -- if length is equal, then only possible edit is to change a character. 
+ * Therefore, move ahead in both strings. 
+ * */
+function editDistanceEqualTo(str1, str2, x){
+    const m = str1.length;
+    const n = str2.length;
+    if(Math.abs(n - m) > 1) return false;
+    let count = 0;
+    let i = 0;  //pointer str1
+    let j = 0;  //pointer str2
+    while(i < m && j < n){
+        if(str1[i] === str2[j]){
+            i++
+            j++
+        } else {
+            count++;
+            if(count > 1) return false;
+            if(m > n) i++
+            else if(m < n) j++
+            else {
+                i++
+                j++
+            }
+        }
+    }
+    //max difference between str length is 1 (see condition above)
+    //once while loop is finished, one char in largest str may remain uncounted
+    if(i < m || j < n) count++;
+    return count === x;
+}
 module.exports = {
     editDistanceRec,
-    editDistanceDp
+    editDistanceDp,
+    editDistanceEqualTo
 }

@@ -1,5 +1,5 @@
 /*
-Starting from the number one, an infinte set of numbers can be produced by 
+Starting from the number one, an infinite set of numbers can be produced by 
 either adding 5 or multiplying by 3. 
 
 Write a function that records a sequence of additions and multiplications 
@@ -8,12 +8,12 @@ that reaches a given number.
 For example 13. This can be reached by (1 * 3) + 5 + 5. 
 For example 15. Cannot be reached.
 
-Startin at 1 there are three possibilities for every step:
+Starting at 1 there are three possibilities for every step:
 - current = target -> return path
 - current > target -> cannot reach target, return null
 - current < target: try addition or try multiplication
 
-The OR operator guarantees that first the addition path is explored untill a 
+The OR operator guarantees that first the addition path is explored until a 
 dead end (null) is reached. Then the multiplication path is explored.
 */
 function findPath(target){

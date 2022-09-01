@@ -2,7 +2,7 @@
  * ############
  * ARRAY UNIONS
  * ############
- * Given two sorted arrays. Write a function that returns the union of thaose
+ * Given two sorted arrays. Write a function that returns the union of those
  * arrays.
  * 
  * Example:
@@ -10,11 +10,11 @@
  * const arr2 = [1,2,3,6,8,9,10]
  * -> union = [1,2,3,4,5,6,7,8,9,10]
  * 
- * Note that the arrays can be of different lenght and values may occur in both 
+ * Note that the arrays can be of different length and values may occur in both 
  * arrays.
  * 
  * LOGIC
- * - use a loop that runs untill we reach the end of one of the arrays
+ * - use a loop that runs until we reach the end of one of the arrays
  * 
  * - use two pointers i and j that move independently
  * 
@@ -61,5 +61,5 @@ module.exports = function findUnion(arr1, arr2){
 }
 /**
  * TIME COMPLEXITY
- * The above function will run in O(max(n,m)), the lenght of the longest array.
+ * The above function will run in O(max(n,m)), the length of the longest array.
  */

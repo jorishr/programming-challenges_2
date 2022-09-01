@@ -11,7 +11,7 @@
  * Edge case: if x = 0, number of sets is 1, namely {} 
  * 
  * LOGIC
- * A brute force approach would be to find all possible subarrays and compare
+ * A brute force approach would be to find all possible sub-arrays and compare
  * their sum to x. 
  *                                                              {}
  *                                     {10}                                                 {}
@@ -20,7 +20,7 @@
  * {10,6,4,2}    {10,6,4}  {10,6,2}  {10,6}  {10,4,2}      {10} {6,4,2} {6,4}   {6,2} {6}      {4,2} {4}  {2}  {}
  *                                      ^       ^                 
  *                                      ^       ^
- * However, we don't need all subarrays. We need to count the ones that amount
+ * However, we don't need all sub-arrays. We need to count the ones that amount
  * to a given number. 
  * 
  * Can we exclude certain subsets? If we find arr[i] > x, it is impossible to
@@ -54,7 +54,7 @@ function countSubsets(arr, x){
                     + addSubsetVals(arr, x - arr[i], i - 1);
         //if x > arr[i], continue two paths: 
         //- exclude arr[i] from further subsets 
-        //- inlcude i: for example, include 6, then the remaining values to
+        //- include i: for example, include 6, then the remaining values to
         //complete the subset should add up to 10, or x - arr[i]
     }
 }

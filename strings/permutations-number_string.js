@@ -13,7 +13,7 @@ with larger numbers like 11111 could be: bbbbb or 11 11 1 thus, kkb or 1 11 11
 thus bkk or 1 1 11 1 thus bbkb etc.
 
 manual solution:
-- case one digit: 26 posibilities a-z
+- case one digit: 26 possibilities a-z
     0 -> a, 1 -> b, 2 -> c
 - case two digits: 
     - if < 26: one letter or 2 and 4, thus z, c and d

@@ -13,7 +13,7 @@
  * Edit distance: 1, as we can convert str1 into str2 by inserting a 's'.
  * 
  * - str1 = "cat", str2 = "cut"
- * Edit distancet:  1, as we can convert str1 into str2 by replacing 'a'
+ * Edit distance:  1, as we can convert str1 into str2 by replacing 'a'
  * with 'u'.
  * 
  * - str1 = "sunday", str2 = "saturday"
@@ -35,14 +35,14 @@
  * - str1 == str2 return 0
  * 
  * B. Start at the end of the string and compare the values. If they are equal
- * process the remaing substrings recursively.
+ * process the remaining substrings recursively.
  * - fn('cat', 'cut')
  * - fn('ca', 'cu')
  * - fn...
  * Eventually base cases n == 0, m == 0 or str1 == str2 will be reached.
  * 
  * C. if str1[last] != str2[last] we need to perform insertion, deletion or
- * subsitution on str1. Count the number of operations for each path 
+ * substitution on str1. Count the number of operations for each path 
  * recursively and retain the min value:
  * return 1 + min of:
  * - fn(str1, str2.substring(0, m - 1))     //insert in str1 
@@ -143,17 +143,17 @@ function editDistanceDp(str1, str2){
  * There are two approaches: 
  * - calculate the edit distance and compare to x, O(n^2)
  * - simple string traversal and keep track of difference in char found, O(n)
- * The latter approach does not require us to calculate the levenshtein 
+ * The latter approach does not require us to calculate the Levenshtein 
  * distance as such:
  * 
  * LOGIC
  * - if difference between m an n is more than 1, return false.
  * - start count = 0
  * - traverse both strings from first character, using two different pointers
- * Two posibilities:
+ * Two possibilities:
  * -- current chars match -> move both pointers i + 1, j + 1 
  * -- current chars don't match, increment count of edits and if count at any
- * reiteration becomes more than 1 return false. Two posibilities remain:
+ * reiteration becomes more than 1 return false. Two possibilities remain:
  * -- if length of one string is larger, then only possible edit is to remove
  * a character, thus move ahead the pointer of larger string
  * -- if length is equal, then only possible edit is to change a character. 

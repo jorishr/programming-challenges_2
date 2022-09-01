@@ -30,13 +30,13 @@ function power(x, n){
 /**
  * Since the loop runs n times, the time this function takes to run is related
  * to the size of the input integer n. -> O(n). The space complexity for this 
- * function is O(1) as we store and update two variables that will ocupy a 
+ * function is O(1) as we store and update two variables that will occupy a 
  * constant amount of memory.
  * 
  * ###############
  * II.   RECURSION
  * ###############
- * The recursive approach offers two possibilites:
+ * The recursive approach offers two possibilities:
  * A. x^n can be redefined as x * x^(n-1)
  * 
  * To account for negative exponents use the absolute value in the recursion 
@@ -44,7 +44,7 @@ function power(x, n){
  * call fn(2, -3), for example, will the condition be true. Once we enter in 
  * the recursive calls, the absolute value is used. 
  * 
- * This way the recursive process returns a result as if we were workin with a
+ * This way the recursive process returns a result as if we were working with a
  * positive integer. Only the final return value is adjusted to 1 / result
  */
 function recursivePower1(x, n){
@@ -56,13 +56,13 @@ function recursivePower1(x, n){
     }
 }
 /**
- * This is not very efficient and ressemble the factorial recursive approach.
+ * This is not very efficient and resemble the factorial recursive approach.
  * The potential issue is that for large numbers the recursion tree becomes 
  * very deep, occupying a lot of memory space. Both time and space complexity
  * are O(n).
  * 
  * T(n) = T(n - 1) + C, with n > 0, T(0) = 1 and C a constant representing the
- * compare condition, substratction and multiplication 
+ * compare condition, subtraction and multiplication 
  * T(n) = T(n - 2) + 2C
  * T(n) = T(n - 3) + 3C
  * T(n) = T(n - 4) + 4C

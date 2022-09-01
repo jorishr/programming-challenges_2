@@ -56,7 +56,7 @@ function numRotations(arr){
  *      && [middle - 1] is bigger -> pivot found at middle - 1
  *      Example: [4,5,1,2,3]    -> pivot = arr[1]
  * If no immediate pivot is found at middle or middle - 1, repeat the search
- * with different paramaters: left subarray or right subarray
+ * with different parameters: left subarray or right subarray
  * 
  * - case 3:
  *      arr[low] >= arr[middle] means that the left subarray is not entirely
@@ -66,7 +66,7 @@ function numRotations(arr){
  * 
  * - case 4: 
  *      Right subarray is not entirely sorted in ascending order
- *      -> repeat pivotSearch with adjusted paramter: low = middle + 1
+ *      -> repeat pivotSearch with adjusted parameter: low = middle + 1
  *      Example: [2,3,4,5,1]
  * 
  * - if no pivot is found, the array is not rotated and the smallest value of
@@ -92,7 +92,7 @@ function findPivot(arr, low = 0, high = arr.length -1){
     }
     return findPivot(arr, middle + 1, high); //case 4
 }
-//Note, to find the minumum value, return switch the return values for case 2 
+//Note, to find the minimum value, return switch the return values for case 2 
 //and case 3.
 
 function numRotationsWithBs(arr){

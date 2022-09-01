@@ -9,7 +9,7 @@ are in the string.
 
 - loop over the string
 - if char = key, count + 1
-- to make the function case insenstive adapt the conditional statement to 
+- to make the function case insensitive adapt the conditional statement to 
 both side be lowercase/uppercase
 
 */

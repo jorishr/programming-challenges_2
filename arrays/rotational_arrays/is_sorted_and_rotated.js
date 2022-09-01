@@ -17,7 +17,7 @@
  * const arr = [5,1,2,3,4] -> true, rotated clockwise
  * const arr = [4,5,1,2,3] -> true, rotated clockwise
  * 
- * The distict feature of a counter-clockwise rotated array that0 is 
+ * The distinct feature of a counter-clockwise rotated array that0 is 
  * sorted is the fact that the minimum value in the array is the starting point
  * of the rotation. And, all values to left will be in ascending order and all
  * remaining values to the right will be in ascending order.

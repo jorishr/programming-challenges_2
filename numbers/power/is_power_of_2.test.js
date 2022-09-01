@@ -14,7 +14,7 @@ describe('Is a given number a power of 2?', () => {
         expect(isPowerOf2(32)).toBe(true);
     })
 })
-describe('Calculate the power of two intgers', () => {
+describe('Calculate the power of two integers', () => {
     test('Basic power calculation function in O(n)', () =>{
         expect(power(2,0)).toBe(1);
         expect(power(2,1)).toBe(2);

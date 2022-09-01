@@ -11,7 +11,7 @@
  * i = 2    random (between 0 and 2) = 1  -> [1,5,4,2,3]
  * i = 1    random (between 0 and 1) = 0  -> [5,1,4,2,3]
  * 
- * loop from n−1 downto 1 do
+ * loop from n−1 down to 1 do
  * pick a random integer 0 <= j <= i, decrease with loop i
  * swap a[j] and a[i]
  * (swap in place)

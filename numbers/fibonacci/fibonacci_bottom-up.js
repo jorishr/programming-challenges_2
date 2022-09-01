@@ -3,9 +3,9 @@
  * BOTTOM-UP APPROACH
  * ##################
  * In the memoization approach we fill up the array of intermediate results
- * untill we get to the n-th fibonacci number. This basically reduces our 
+ * until we get to the n-th Fibonacci number. This basically reduces our 
  * problem to filling up a an array with calculations, thereby removing the
- * need for recursion alltogether.
+ * need for recursion all together.
  * 
  * - Start with base cases: n == 1 and n == 2, add to arr.
  * - Loop from 3 to n
@@ -35,7 +35,7 @@ function findFibAt(n){
 //console.timeEnd()   // ~= 19m
 /**
  * TIME COMPLEXITY
- * The time complexity for this function is O(n) as we define the enitre array
+ * The time complexity for this function is O(n) as we define the entire array
  * of n elements once. The advantage of avoiding recursion is that we can now 
  * compute very large numbers without reaching the limit of the call stack.
  *  */

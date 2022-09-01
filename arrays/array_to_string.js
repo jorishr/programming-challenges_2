@@ -1,6 +1,6 @@
 /*
 Write a function that converts an array of integers to a string whereby the 
-elements of the array are seperate by comma-space.
+elements of the array are separate by comma-space.
 
 [1,2,3].print() //-> '1, 2, 3'
 */

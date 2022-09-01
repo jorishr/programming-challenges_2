@@ -2,8 +2,8 @@
  * To add custom functions to all string instance in a program you can add that
  * function to the class prototype: String.prototype.myFn = function(){}.
  * 
- * You can also add a function to a particular string if you instancied that 
- * string using the String class constructer. This gives you a string object to
+ * You can also add a function to a particular string if you instantiated that 
+ * string using the String class constructor. This gives you a string object to
  * which you can add properties.
  */
 const myStr = new String('hello');

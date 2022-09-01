@@ -1,6 +1,6 @@
 /**
- * MODULAR EXPONENTATION
- * Modular exponentation takes the modulo of an exponential expression and is 
+ * Modular Exponentiation
+ * Modular exponentiation takes the modulo of an exponential expression and is 
  * used in cryptography.
  * 
  * x^n % m 
@@ -9,7 +9,7 @@
  * 5^2 % 7 = 25 % 7 = 4
  * 5^3 % 7 = 125 % 7 = 6
  * 
- * The issue with exponentation is that for relatively small exponents we can
+ * The issue with exponentiation is that for relatively small exponents we can
  * approach the limit of a 32-bit system very fast:
  * if one bit is reserved for the sign then the biggest number you can only 
  * have numbers between -2^31 and 2^31

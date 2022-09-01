@@ -1,6 +1,6 @@
 /**
  * Is a given number a power of 2? 
- * In other words, can you keep dividing n untill we get 1 with all remainders
+ * In other words, can you keep dividing n until we get 1 with all remainders
  * being 0.
  * 
  * 20 -> 20 / 2 = 10 -> 10 / 2 = 5 -> 5 / 2 = 2, remainder != 0

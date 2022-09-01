@@ -14,7 +14,7 @@ module.exports = function findFibAt(n){
 //console.timeEnd() //-> ~= 10 sec
 /**
  * TIME COMPLEXITY: O(2^n)
- * The recursion tree will grow exponetially with n, making it very 
+ * The recursion tree will grow exponentially with n, making it very 
  * inefficient. See memoization and bottom up approaches for more
  * efficient solutions.
  */

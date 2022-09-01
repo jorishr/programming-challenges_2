@@ -58,7 +58,7 @@ function findCommonElems(arr1, arr2){
  * To add a third array:
  * - add additional pointer
  * - update the while loop condition
- * - update 3 posibilties:
+ * - update 3 possibilities:
  * arr1[i] < arr2[j] -> i++
  * arr2[j] < arr3[k] -> j++ 
  * arr1[i] > arr2[j] or arr2[j] > arr3[k] -> k++

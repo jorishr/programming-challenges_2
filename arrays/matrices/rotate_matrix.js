@@ -37,7 +37,7 @@
  * [ 7, 4, 1 ]
  * [ 8, 5, 2 ] 
  * [ 9, 6, 3 ]
- * IF there are more row and colums, continues with square two which is inside
+ * IF there are more row and columns, continues with square two which is inside
  * square one.
  */
 

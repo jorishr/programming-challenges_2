@@ -28,7 +28,7 @@ function findGcd(a, b){
  * 10 % 5 and 5 % 5 -> gcd = 5 
  * Thus 5 calculations.
  *
- * Euclid's algortithm greatly reduces the amount calculations that have to
+ * Euclid's algorithm greatly reduces the amount calculations that have to
  * be performed.
  * 
  * dividend  = 10  5  
@@ -54,7 +54,7 @@ function euclidGcd(a, b){
 /**
  * Optimizations:
  * - the first condition can be simplified to set the dividen to a and the 
- * divior to b. This will merely add one single loop to get the same result
+ * divisor to b. This will merely add one single loop to get the same result
  * 
  * dividen = a
  * divisor = b

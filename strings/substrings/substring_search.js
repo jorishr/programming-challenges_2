@@ -18,7 +18,7 @@
  * Edges cases: empty strings and length substr > length str
  * The time complexity of this approach is O(n*m).
  * 
- * Further study: The Knuth–Morris–Pratt Algoritm improves time complexity
+ * Further study: The Knuth–Morris–Pratt Algorithm improves time complexity
  * to O(n + m).
  */
 function containsSubstr(str, substr){

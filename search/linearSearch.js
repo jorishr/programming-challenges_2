@@ -20,7 +20,7 @@ function basicSearch(arr, el){
 }
 /*
 TIME COMPLEXITY EVALUATION
-You loop over the entire array once (in the wors case), thus O(n) or linear 
+You loop over the entire array once (in the worse case), thus O(n) or linear 
 complexity. It is a brute force technique and useful if the array is not 
 sorted. If you can work with sorted arrays, more efficient options can be 
 explored such as binary search, block search or interpolation search.

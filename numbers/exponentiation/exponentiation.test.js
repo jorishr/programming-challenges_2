@@ -1,6 +1,6 @@
-const power           = require('./exponention').power;
-const recursivePower1 = require('./exponention').recursivePower1;
-const recursivePower2 = require('./exponention').recursivePower2;
+const power           = require('./exponentiation').power;
+const recursivePower1 = require('./exponentiation').recursivePower1;
+const recursivePower2 = require('./exponentiation').recursivePower2;
 const modExp          = require('./exponentiation_modular');
 
 describe('Exponentiation', () => {
@@ -23,7 +23,7 @@ describe('Exponentiation', () => {
         expect(recursivePower2(10,-6)).toEqual(0.000001);
         expect(recursivePower2(10,3)).toEqual(1000);
     })
-    it('Returns the modular exponentation of x^n % m', () => {
+    it('Returns the modular exponentiation of x^n % m', () => {
         expect(modExp(5, 2, 7)).toEqual(4)
         expect(modExp(5, 3, 7)).toEqual(6)
         expect(modExp(2, 10, 8)).toEqual(0)

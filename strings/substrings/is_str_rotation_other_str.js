@@ -28,8 +28,8 @@
  * 'abcdabcd' -> includes two clockwise rotations   'cdab'
  * 'abcdabcd' -> includes three clockwise rotations 'bcda'
  * 
- * 'abcdabcd' -> does NOT include arbitrary modifcation 'abdc'
- * 'abcdabcd' -> does NOT include arbitrary modifcation 'bacd'
+ * 'abcdabcd' -> does NOT include arbitrary modification 'abdc'
+ * 'abcdabcd' -> does NOT include arbitrary modification 'bacd'
  */
 function isRotationOfConcat(baseStr, inputStr){
     const n = baseStr.length;
@@ -42,7 +42,7 @@ function isRotationOfConcat(baseStr, inputStr){
 /**
  * II. LOOP
  * NOTE: this exercise can also be done with arrays. For detailed step by step
- * walkthrough see array exercises folders.
+ * walk through see array exercises folders.
  */
 function isRotationOfLoop(baseStr, inputStr){
     const n = baseStr.length;

@@ -11,7 +11,7 @@
  * [1,2,1,3,1,4]    -> return 1
  * 
  * The brute force approach would be to loop over the arr n * n times and count
- * the occurance of each element.
+ * the occurrence of each element.
  * 
  * Loop over arr just once and store each elem in counter dict, also keep track
  * of highest count.

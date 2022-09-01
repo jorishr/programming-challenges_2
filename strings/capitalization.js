@@ -87,10 +87,10 @@ function capitalizeWord(str){
 }
 
 /*
-REFACTOR: Using Javascript native methods the above code can be simplyfied.
+REFACTOR: Using Javascript native methods the above code can be simplified.
 */
 
-function loweCaseWord(str){
+function lowerCaseWord(str){
     return str.toLowerCase();
 }
 
@@ -131,13 +131,13 @@ Similar problem.
 
 Write a function that takes in a string and an index position for which the 
 character needs to be capitalized. The function returns a string with one
-letter capitalized (others lowecase) and saves the return value into a variable.
+letter capitalized (others lowercase) and saves the return value into a variable.
 If the parameter passed to function is not a string or the index position is 
 out of range, return an error message.
 
 - error if index < 0 or > index.length -1
 - error if type of parameter is not str
-- seperate characters of the string into array
+- separate characters of the string into array
 - change value at index position
 - join into new string
 */
@@ -157,7 +157,7 @@ module.exports = {
     lowerCaseWord,
     capitalizeWord,
     capitalize,
-    loweCaseWord,
+    lowerCaseWord,
     capWord,
     capTitle,
     capAtIndex

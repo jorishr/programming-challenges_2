@@ -17,15 +17,15 @@ function findFactors(n){
 }
 /**
  * The time complexity is O(n). 
- * The algorithm can be improved using the cofactors. If n is divisible by a, 
+ * The algorithm can be improved using the co-factors. If n is divisible by a, 
  * then there is always a cofactor b for which a * b  = n. That cofactor can 
  * be found by dividing n by a. 
  * 
- * Also there are three possibilites: 
+ * Also there are three possibilities: 
  * if a < b then a < sqrt(n)
  * if a > b then b > sqrt(n)
  * if a = b then a = b = sqrt(n)
- * In any case the cofactors are less or equal than sqrt(n)
+ * In any case the co-factors are less or equal than sqrt(n)
  */
 function findFactorsOptimized(n){
     let factors = [];

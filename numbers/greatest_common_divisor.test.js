@@ -4,7 +4,7 @@ const euclidSimplified = require('./greatest_common_divisor').euclidSimplified;
 const euclidRecursive = require('./greatest_common_divisor').euclidRecursive;
 
 describe('Find common divisors of two given numbers', () => {
-    it('Returns the greatest commond divisor of two numbers a and b', () =>{
+    it('Returns the greatest common divisor of two numbers a and b', () =>{
         expect(findGcd(10, 5)).toBe(5);
         expect(findGcd(5, 10)).toBe(5);
         expect(findGcd(2, 1)).toBe(1);

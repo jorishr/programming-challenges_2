@@ -75,7 +75,7 @@ a specific part of a given string.
 
 One each recursive call we split off the first character and concatenate it at 
 the end of string that is returned by the recursion. The remaining string is 
-passed through function again untill the string has just one 
+passed through function again until the string has just one 
 character left. The result is the concatenation of all characters in reverse 
 order.
 */
@@ -167,7 +167,7 @@ Is the string a palindrome?
 
 The problem is similar to string reversal:
 
-- reverse the string by spltting it and reversing the resulting array
+- reverse the string by splitting it and reversing the resulting array
 - join the resulting into string
 - compare to original str and return true/false
 */

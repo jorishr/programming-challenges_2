@@ -71,7 +71,7 @@ function swapRotate(arr, k){
  * A. Clockwise rotation
  * - reverse the subarray arr[n - 1] arr[n - k]
  * - reverse the subarray arr[n - k - 1] arr[0]
- * - reverse the enitre arr from arr[0] to arr[n-1] 
+ * - reverse the entire arr from arr[0] to arr[n-1] 
  * 
  * Example: [1,2,3,4,5], k = 2
  *  -> reverse [4,5]     -> [1,2,3,5,4]
@@ -102,7 +102,7 @@ function reverseRotate(arr, k, clock = 0){
         reverse(arr, 0, k - 1);
         reverse(arr, k, arr.length - 1);
         reverse(arr, 0, arr.length - 1);
-    } else throw new Error('Invalid rotation direction. Allowed paramters: clockwise = 0, counter clockwise = 1');
+    } else throw new Error('Invalid rotation direction. Allowed parameters: clockwise = 0, counter clockwise = 1');
     return arr;
 }
 

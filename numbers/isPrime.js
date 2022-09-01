@@ -75,7 +75,7 @@ function findPrimes(n){
 /**
  * Sieve of Eratosthenes: assume all numbers are prime.
 To find all prime numbers less than a given number n we can use additional 
-optmizations by eliminating all multiples of a previously found prime number.
+optimizations by eliminating all multiples of a previously found prime number.
 
 Thus if you find 3 to be a prime number, you can eliminate 9, 12, 18 etc.
 Thus if you find 5 to be a prime number, you can eliminate 10, 15, 20 etc.

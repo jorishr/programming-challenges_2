@@ -18,9 +18,9 @@ function power(a,b){
     return result;
 }
 /**
- * ###################
- * FAST POWER ALGORITM
- * ###################
+ * ####################
+ * Fast Power Algorithm
+ * ####################
  * a^b can be redefined 
  * - for even exponents:    a^b = a^(b/2) * a^(b/2)
  * - for idd exponents:     a^b = a^(b/2) * a^(b/2) * a with b/2 the result of

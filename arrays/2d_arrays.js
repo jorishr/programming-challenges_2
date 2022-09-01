@@ -24,7 +24,7 @@ const init2DArr = function (n, m){
  *  ...
  *  row[n][0] -> row[n][last]
  *  
- * The problem can be redefined as pinting a row, repeated 
+ * The problem can be redefined as printing a row, repeated 
  * arr.length times
  * 
  * Plus, every other row needs to be printed in reverse.
